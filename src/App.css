@@ -40,7 +40,7 @@ h2{
 }
 Button{
   width: 200px;
-  padding: 20px;
+
 }
 
 @media screen and (max-width: 850px)  {

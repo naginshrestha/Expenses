@@ -6,10 +6,7 @@ const List = () => {
 
 
   return (
-   
-
-
-
+<>
     <Table  striped bordered hover>
       <thead>
         <tr>
@@ -28,7 +25,7 @@ const List = () => {
       </tbody>
     </Table> 
 
-
+    </>
   )
 }
 

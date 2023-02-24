@@ -17,44 +17,40 @@ const getdatafromLS=() =>{
 
 const Header = ({getDataLS}) => {
 
-    const [myData,setMyData] = useState(getdatafromLS())
+    const [myData,setMyData] = useState([])
 
     // input form
-    const [initalval,setInitialValue] =useState({
-      type:"",
-      description:"",
-      amont:"",
-      date:""
-    })
+    const [initalval,setInitialValue] =useState({})
  
-   
+   const handlechanged =(e) =>
+   {
+    const {name ,value} =e.target
+    setInitialValue({...initalval,[name]:value})
+  
+   }
 
     const handlesumit =(e) =>{
         e.preventDefault();
-
        // setMyData((prevValue) =>[...prevValue,initalval]) //this is also work
+        setMyData([...myData,initalval])
 
-        setMyData(([...myData,initalval]))
-        initalval.amont=''
-        initalval.date=''
-        initalval.description=''
-        initalval.type=''
-
-
+        setInitialValue('')
+        console.log(initalval)
+    
     }
+    
+    // useEffect(()=>{
 
-    useEffect(()=>{
-
-        localStorage.setItem("formData",JSON.stringify(myData))
+    //     localStorage.setItem("formData",JSON.stringify(myData))
 
     
 
-    },[myData  ])
+    // },[myData  ])
 
 
   return (
     <>
-    <Form  className='Header-frame'>
+    <Form  onSubmit={handlesumit} className='Header-frame'>
 
         <h2>My Diary</h2>
 
@@ -62,8 +58,8 @@ const Header = ({getDataLS}) => {
 
         <Form.Group className='Frame-bg' as={Col}>
           <p>Type</p>
-          <Form.Select value={initalval.type} onChange={(e) => (setInitialValue({...initalval,type: e.target.value}))} aria-label="Default select example">
-           <option>Open this select menu</option>
+          <Form.Select  required name='type' onChange={handlechanged}>
+           <option>Choose the options...</option>
            <option value="Earning">Earning</option>
            <option value="Expenses">Expenses</option>
            <option value="Saving">Saving</option>
@@ -72,27 +68,26 @@ const Header = ({getDataLS}) => {
 
         <Form.Group  className='Frame-bg' as={Col}>
           <p>Descriptions</p>
-          <Form.Control value={initalval.description} onChange={(e) => (setInitialValue({...initalval,description: e.target.value}))} type="text" placeholder="description" />
+          <Form.Control required onChange={handlechanged} name='description' type="text" placeholder="description" />
         </Form.Group>
 
 
         <Form.Group className='Frame-bg' as={Col}>
           <p>Amount</p>
-          <Form.Control value={initalval.amont} onChange={(e) => (setInitialValue({...initalval,amont: e.target.value}))} type="number" placeholder="anount" />
+          <Form.Control required onChange={handlechanged}  name='amount' type="number" placeholder="anount" />
         </Form.Group>
 
-        <Form.Group className='Frame-bg' id="form-date" as={Col}>
+        <Form.Group  className='Frame-bg' name='date' id="form-date" as={Col}>
           <p>Choose Date</p>
-          <Form.Control  type="date" name="datepic" placeholder="DateRange"
-         value={initalval.date} onChange={(e) => (setInitialValue({...initalval,date: e.target.value}))}
+          <Form.Control required type="date" name="datepic" placeholder="DateRange"
+          onChange={handlechanged} 
               />
            </Form.Group>
       </div>
 
 
        <div className='Sumit-btn' >
-        <Button  onClick={handlesumit} type="submit"  variant="success" size="lg">Form sumit</Button>
-
+        <Button   type="submit"  variant="success" size="lg">Form sumit</Button>
        </div>
 
 
