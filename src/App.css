@@ -40,6 +40,7 @@ h2{
 }
 Button{
   width: 200px;
+  padding: 20px;
 }
 
 @media screen and (max-width: 850px)  {
@@ -48,4 +49,18 @@ Button{
    display: flex;
    flex-direction: column;
   }
+  #form-date{
+    padding: 0px 40px 0px 0px;
+  }
 }
+
+
+.table{
+  border: 1px solid rgb(221, 221, 221);
+
+  padding: 100px;
+  background-color: 	#F0F0F0;
+  box-shadow: 0px 2px 2px rgb(173, 171, 171);
+  margin-left: 60px;
+ 
+}  
