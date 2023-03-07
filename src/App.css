@@ -64,3 +64,9 @@ Button{
   margin-left: 60px;
  
 }  
+
+.mainbody {
+  min-height: 80vh;
+
+}
+
