@@ -17,8 +17,8 @@ const initialState = {
   fName: "",
   lName: "",
   email: "",
-  password: "Aa12345",
-  confirmPassword: "Aa12345",
+  password: "",
+  confirmPassword: "",
 };
 
 export const Registration = () => {
