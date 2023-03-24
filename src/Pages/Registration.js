@@ -122,14 +122,14 @@ export const Registration = () => {
       label: "First Name",
       name: "fName",
       required: true,
-      placeholder: "sam",
+      placeholder: "Enter your first name",
     },
     {
       value: frm.lName,
       label: "Last Name",
       name: "lName",
       required: true,
-      placeholder: "smith",
+      placeholder: "Enter your last name",
     },
     {
       value: frm.email,
@@ -137,7 +137,7 @@ export const Registration = () => {
       name: "email",
       type: "email",
       required: true,
-      placeholder: "sam@email.com",
+      placeholder: "Enter your email",
     },
     {
       value: frm.password,
@@ -145,7 +145,7 @@ export const Registration = () => {
       name: "password",
       type: "password",
       required: true,
-      placeholder: "****",
+      placeholder: "Enter your password",
     },
     {
       value: frm.confirmPassword,
@@ -153,7 +153,7 @@ export const Registration = () => {
       name: "confirmPassword",
       type: "password",
       required: true,
-      placeholder: "****",
+      placeholder: "Entern your confirm password",
     },
   ];
 

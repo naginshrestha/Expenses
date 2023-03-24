@@ -26,14 +26,14 @@ export const Login = () => {
       name: "email",
       type: "email",
       required: true,
-      placeholder: "sam@email.com",
+      placeholder: "Enter your email",
     },
     {
       label: "Password",
       name: "password",
       type: "password",
       required: true,
-      placeholder: "****",
+      placeholder: "Enter your password",
     },
   ];
 
