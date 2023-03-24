@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { toast } from "react-toastify";
-import { CustomInput } from "../components/CustomInput";
+import { CustomInput } from "../Components/CustomInput";
 
-import { Layout } from "../components/Layout";
+import { Layout } from "../Components/Layout";
 
 import { auth, db } from "../firebase/firebase-config";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";

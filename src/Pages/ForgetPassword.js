@@ -1,6 +1,6 @@
 import React from "react";
-import { Layout } from "../components/Layout";
-import { PassResetForm } from "../components/PassResetForm";
+import { Layout } from "../Components/Layout";
+import { PassResetForm } from "../Components/PassResetForm";
 
 export const ForgetPassword = () => {
   return (

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { CustomInput } from "../components/CustomInput";
+import { CustomInput } from "../Components/CustomInput";
 import { setUser } from "../redux/user/userSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { Layout } from "../components/Layout";
+import { Layout } from "../Components/Layout";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase-config";
 

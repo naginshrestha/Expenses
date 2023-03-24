@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { DTable } from "../components/DTable";
-import { Layout } from "../components/Layout";
-import { MyForm } from "../components/MyForm";
+import { DTable } from "../Components/DTable";
+import { Layout } from "../Components/Layout";
+import { MyForm } from "../Components/MyForm";
 
 export const Dashboard = () => {
   const [list, setList] = useState([]);
