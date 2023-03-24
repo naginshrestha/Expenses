@@ -1,17 +1,19 @@
-import React from 'react'
-import { Header } from './Header'
+import React from "react";
+import { Header } from "./Header";
 
-export const Layout = ({children}) => {
-  return (  
+export const Layout = ({ children, user }) => {
+  return (
     <div>
+      {/* header */}
+      <Header user={user} />
 
-    <Header/>
+      {/* main body */}
+      <div className="main">{children}</div>
 
-    <div className='mainbody' >{children}</div>
-
-    <footer className="mt-5  bg-dark text-light p-3 text-center">
+      {/* footer */}
+      <footer className="mt-5 bg-dark text-light p-3 text-center">
         &copy; Copy right all reserver 2023
       </footer>
-</div>
-  )
-}
+    </div>
+  );
+};
