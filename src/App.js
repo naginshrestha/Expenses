@@ -1,17 +1,17 @@
 import "./App.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Login } from "./pages/Login";
-import { Registration } from "./pages/Registration";
-import { ForgetPassword } from "./pages/ForgetPassword";
-import { Dashboard } from "./pages/Dashboard";
+import { Login } from "./Pages/Login";
+import { Registration } from "./Pages/Registration";
+import { ForgetPassword } from "./Pages/ForgetPassword";
+import { Dashboard } from "./Pages/Dashboard";
 import { ToastContainer } from "react-toastify";
-import { PrivateRoute } from "./pages/PrivateRoute";
+import { PrivateRoute } from "./Pages/PrivateRoute";
 import { useState } from "react";
 
 function App() {
   const [user, setUser] = useState({
-    fName: "Prem",
+    fName: "Name",
   });
   return (
     <div className="">
